@@ -13,6 +13,9 @@ const addressField = document.querySelector('#address');        //this version i
 const $park = $('#park');                                       // this is in jquery
 //learning about query selectors and jquery 
 
+const parkimg = document.querySelector('#specials h2 img');     //new: adding thumbnail image
+const parksec = document.querySelector('#specials');            //new: to remove the hidden
+
 const handleErrors = (response) => {
     if (response.ok) return response.json();
     return response.json()
@@ -23,7 +26,9 @@ const handleErrors = (response) => {
 
 const handleSuccess = (data) => {
     console.log(data)
-    //const data_i_want = (this will contain the path of the required data which you can get from the response in the console) //new
+    //const data_i_want = (this will contain the path of the required data which you can get from the response in the console)
+    parkimg.src = 'image.svg'       //new: path or url to image
+    parksec.classList.remove('hidden');     //new: removes hidden
 };
 
 const createRequest = (url) => {
