@@ -23,6 +23,7 @@ const handleErrors = (response) => {
 
 const handleSuccess = (data) => {
     console.log(data)
+    //const data_i_want = (this will contain the path of the required data which you can get from the response in the console) //new
 };
 
 const createRequest = (url) => {
@@ -38,11 +39,11 @@ const checkCompletion = () => {
             createRequest(requestUrl);
     }
 }
-//new: validation when data is entered, now the code can dynamically adjust data in a field so that it changes when input is changed
+//validation when data is entered, now the code can dynamically adjust data in a field so that it changes when input is changed
 //the above function checks if the field are not empty then it will create a request
 
 createRequest(Myurl);
 
 addressField.addEventListener('blur', checkCompletion);
 $park.addEventListener('blur', checkCompletion);
-//new: this two request will help in giving the data that is entered in the field
+//this two request will help in giving the data that is entered in the field
